@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "surface-container": "#e6eff8", "inverse-primary": "#78d5db", "primary-fixed-dim": "#78d5db", "secondary-fixed": "#ffd7f1", "on-primary-fixed": "#002022", "on-tertiary-fixed": "#001f2a", "primary-container": "#017e84", "background": "#f6faff", "tertiary-container": "#007b9f", "primary": "#006368", "on-tertiary-fixed-variant": "#004d65", "tertiary": "#00617d", "primary-fixed": "#95f1f8", "on-background": "#141d23", "on-surface": "#141d23", "surface-bright": "#f6faff", "on-secondary-fixed": "#2f1029", "on-error": "#ffffff", "surface-container-highest": "#dbe4ed", "on-primary-fixed-variant": "#004f53", "surface-dim": "#d2dbe4", "tertiary-fixed": "#bee9ff", "secondary-container": "#fac9ea", "on-surface-variant": "#3e4949", "tertiary-fixed-dim": "#77d2fa", "surface-container-low": "#ecf5fe", "secondary-fixed-dim": "#e9b8d9", "surface-tint": "#00696e", "surface-container-high": "#e0e9f2", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-primary-container": "#dffdff", "on-tertiary-container": "#f0f9ff", "outline-variant": "#bdc9c9", "outline": "#6e797a", "on-secondary-fixed-variant": "#5f3b56", "inverse-on-surface": "#e9f2fb", "error-container": "#ffdad6", "surface-variant": "#dbe4ed", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "surface": "#f6faff", "on-secondary-container": "#78516d", "inverse-surface": "#293138", "secondary": "#79526f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-tablet": "1.5rem", "space-xl": "2rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "gutter-tablet": "1.25rem" }, "fontFamily": { "headline-xl": [ "Roboto" ], "headline-xl-mobile": [ "Roboto" ], "body-sm": [ "Roboto" ], "label-md": [ "Roboto" ], "label-sm": [ "Roboto" ], "body-md": [ "Roboto" ], "headline-md": [ "Roboto" ], "body-lg": [ "Roboto" ], "headline-lg": [ "Roboto" ], "label-lg": [ "Roboto" ] }, "fontSize": { "headline-xl": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0", "fontWeight": "700" } ], "headline-xl-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "0", "fontWeight": "700" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "700" } ], "body-md": [ "0.875rem", { "lineHeight": "1.3125rem", "letterSpacing": "0", "fontWeight": "400" } ], "headline-md": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "700" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" } ], "headline-lg": [ "1.3125rem", { "lineHeight": "1.75rem", "letterSpacing": "0", "fontWeight": "700" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "700" } ] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-on-surface truncate">Profile &amp; Settings</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full bg-surface pt-14 pb-safe"><div class="flex flex-col w-full pb-10">
+<!-- Top App Actions Sub-Header -->
+<div class="flex items-center justify-between px-margin py-space-sm bg-surface-container-lowest shadow-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+        Odoo v17.4 Connected
+      </span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container text-primary font-label-lg text-label-lg active:bg-surface-container-high transition-colors" id="edit-profile-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md px-margin">
+<!-- User Profile Card -->
+<div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-space-md relative">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm" data-alt="High resolution professional portrait photo of Alex Morgan, warm friendly smile, tech lead aesthetic, clean soft studio lighting with subtle teal highlights and neutral clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAas0AOswYQGWgeH0RHvxEVuUyK0kLrKj9Fq0VfHCX-i51X9j2xZVTtFrex_R72Nx7FHYrD3-0EHp2kzbrr-DJlfStn9tFAuRgODkiDNP9jg2x4x2IMIR7NOpuxwG10NvxOdACAIQc6llZetv-MZO0PwxMX5wBwbv8XfW7_R7xYJ4Tu856dIKHtTRH43V6I9FIi393loHihoKUCDWL7jDBgb61i7zdgZJAJiRpET_A"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" title="Online now"></span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface truncate">Alex Morgan</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">alex.morgan@vanguard.io</p>
+<div class="flex items-center gap-space-xs mt-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Enterprise Customer Portal</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Quick Stats Strip -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-space-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary">28</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Tickets Logged</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary">99.4%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">SLA Uptime</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary">Priority</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Tier 1 SLA</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Account & Security -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Account &amp; Security</h3>
+</div>
+<div class="flex flex-col">
+<!-- Personal Info -->
+<button class="flex items-center justify-between py-space-sm px-1 text-left rounded-lg hover:bg-surface-container-low active:bg-surface-container transition-colors group" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Personal Information</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Alex Morgan • +1 (555) 789-2041</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Change Password -->
+<button class="flex items-center justify-between py-space-sm px-1 text-left rounded-lg hover:bg-surface-container-low active:bg-surface-container transition-colors group" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">key</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Change Password</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Last changed 42 days ago</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Two-Factor Authentication -->
+<div class="flex items-center justify-between py-space-sm px-1">
+<div class="flex items-center gap-space-sm min-w-0 pr-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">lock_clock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Two-Factor Authentication (2FA)</span>
+<span class="font-body-sm text-body-sm text-emerald-600 truncate flex items-center gap-1 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Active • Authenticator App
+              </span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors shrink-0" data-toggle="2fa" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+<!-- Biometric Unlock -->
+<div class="flex items-center justify-between py-space-sm px-1">
+<div class="flex items-center gap-space-sm min-w-0 pr-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">fingerprint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Biometric Unlock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Face ID / Fingerprint fast login</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors shrink-0" data-toggle="biometrics" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: App Preferences -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">App Preferences</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Interface Language -->
+<div class="flex flex-col gap-1 py-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">translate</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Interface Language</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Portal localized copy</span>
+</div>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container py-1.5 pl-3 pr-8 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors" id="lang-select">
+<option selected="" value="en">English (US)</option>
+<option value="bn">Bengali (বাংলা)</option>
+<option value="es">Spanish (Español)</option>
+<option value="fr">French (Français)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Theme Mode: Segmented Control -->
+<div class="flex flex-col gap-2 py-1">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">palette</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium">Theme Mode</span>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-container p-1 rounded-lg" id="theme-control">
+<button class="theme-btn py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md flex items-center justify-center gap-1 transition-all" data-theme="light" type="button">
+<span class="material-symbols-outlined text-[16px]">light_mode</span>
+<span>Light</span>
+</button>
+<button class="theme-btn py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 transition-all hover:text-on-surface" data-theme="dark" type="button">
+<span class="material-symbols-outlined text-[16px]">dark_mode</span>
+<span>Dark</span>
+</button>
+<button class="theme-btn py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 transition-all hover:text-on-surface" data-theme="auto" type="button">
+<span class="material-symbols-outlined text-[16px]">settings_brightness</span>
+<span>Auto System</span>
+</button>
+</div>
+</div>
+<!-- Default Landing Tab -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">tab</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Default Landing Tab</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Initial view upon app open</span>
+</div>
+</div>
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container py-1.5 pl-3 pr-8 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors">
+<option selected="">Tickets Dashboard</option>
+<option>Chatter Queue</option>
+<option>Knowledge Base</option>
+<option>My SLAs</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Notifications & Alerts -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Notifications &amp; Alerts</h3>
+</div>
+<div class="flex flex-col divide-y-0">
+<!-- Push Notifications -->
+<div class="flex items-center justify-between py-space-sm px-1">
+<div class="flex items-center gap-space-sm min-w-0 pr-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">notifications_active</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Push Notifications</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant real-time mobile push alerts</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors shrink-0" data-toggle="push" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+<!-- Email Digests -->
+<div class="flex items-center justify-between py-space-sm px-1">
+<div class="flex items-center gap-space-sm min-w-0 pr-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">mark_email_read</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Email Digests</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Daily summary of queue resolutions</span>
+</div>
+</div>
+<button aria-checked="false" class="w-12 h-7 rounded-full bg-surface-container-highest p-0.5 flex items-center justify-start transition-colors shrink-0" data-toggle="email" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+<!-- Urgent Incident Chimes -->
+<div class="flex items-center justify-between py-space-sm px-1">
+<div class="flex items-center gap-space-sm min-w-0 pr-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Urgent Incident Chimes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Override silent mode for P1 blockers</span>
+</div>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors shrink-0" data-toggle="chimes" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Data & Storage -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Data &amp; Storage</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Offline Cache Store -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">database</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Offline Cache Store</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate" id="cache-size-text">34.2 MB cached for triage</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high hover:bg-surface-container transition-colors shrink-0" id="clear-cache-btn" type="button">
+            Clear Cache
+          </button>
+</div>
+<!-- Sync Frequency -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Sync Frequency</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Background polling protocol</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-md text-label-md font-medium shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+            Realtime WebSocket
+          </span>
+</div>
+</div>
+</div>
+<!-- Section 5: Legal & Account Action -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">policy</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Legal &amp; Security Actions</h3>
+</div>
+<div class="flex flex-col">
+<!-- Privacy Policy -->
+<button class="flex items-center justify-between py-space-sm px-1 text-left rounded-lg hover:bg-surface-container-low transition-colors group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">description</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium">Privacy Policy &amp; Data Rights</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Sign Out Button -->
+<div class="pt-space-sm pb-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-3 rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg active:opacity-90 transition-opacity" id="sign-out-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span>Sign Out of Account</span>
+</button>
+</div>
+<!-- Request Account Deletion -->
+<div class="flex justify-center pt-space-xs pb-1">
+<button class="font-label-md text-label-md text-error hover:underline transition-all" id="delete-account-btn" type="button">
+            Request Account Deletion
+          </button>
+</div>
+</div>
+</div>
+<!-- App Version & Engine Footprint -->
+<div class="flex flex-col items-center justify-center gap-1 pt-space-xs text-center">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+<span>Odoo Desk Enterprise Mobile • Build 17.4.92b</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Encrypted via TLS 1.3 • Vanguard Aerospace Group</span>
+</div>
+</div>
+</div>
+<script>
+  // Toggle Switch Handler
+  document.querySelectorAll('[role="switch"]').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const isChecked = toggle.getAttribute('aria-checked') === 'true';
+      const newState = !isChecked;
+      toggle.setAttribute('aria-checked', String(newState));
+      
+      if (newState) {
+        toggle.classList.remove('bg-surface-container-highest', 'justify-start');
+        toggle.classList.add('bg-primary', 'justify-end');
+      } else {
+        toggle.classList.remove('bg-primary', 'justify-end');
+        toggle.classList.add('bg-surface-container-highest', 'justify-start');
+      }
+    });
+  });
+
+  // Segmented Theme Control Handler
+  const themeButtons = document.querySelectorAll('.theme-btn');
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      themeButtons.forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      btn.classList.remove('text-on-surface-variant');
+    });
+  });
+
+  // Cache Clear Interaction
+  const clearCacheBtn = document.getElementById('clear-cache-btn');
+  const cacheSizeText = document.getElementById('cache-size-text');
+  if (clearCacheBtn && cacheSizeText) {
+    clearCacheBtn.addEventListener('click', () => {
+      clearCacheBtn.disabled = true;
+      clearCacheBtn.innerText = 'Clearing...';
+      setTimeout(() => {
+        cacheSizeText.innerText = '0 KB cached • Ready for offline';
+        clearCacheBtn.innerText = 'Cleared!';
+        setTimeout(() => {
+          clearCacheBtn.innerText = 'Clear Cache';
+          clearCacheBtn.disabled = false;
+        }, 1500);
+      }, 500);
+    });
+  }
+
+  // Feedback on Sign Out
+  const signOutBtn = document.getElementById('sign-out-btn');
+  if (signOutBtn) {
+    signOutBtn.addEventListener('click', () => {
+      if (confirm('Are you sure you want to sign out of Odoo Desk?')) {
+        signOutBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Signing out...</span>';
+        setTimeout(() => {
+          location.reload();
+        }, 800);
+      }
+    });
+  }
+</script></main></body></html>

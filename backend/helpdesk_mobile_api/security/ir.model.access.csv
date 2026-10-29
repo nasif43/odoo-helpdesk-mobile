@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_helpdesk_mobile_token_user,access.helpdesk.mobile.token.user,model_helpdesk_mobile_token,base.group_user,1,1,1,1
+access_helpdesk_mobile_token_portal,access.helpdesk.mobile.token.portal,model_helpdesk_mobile_token,base.group_portal,1,1,1,1
+access_helpdesk_mobile_device_user,access.helpdesk.mobile.device.user,model_helpdesk_mobile_device,base.group_user,1,1,1,1
+access_helpdesk_mobile_device_portal,access.helpdesk.mobile.device.portal,model_helpdesk_mobile_device,base.group_portal,1,1,1,1
+access_helpdesk_mobile_field_config_manager,access.helpdesk.mobile.field.config.manager,model_helpdesk_mobile_field_config,helpdesk.group_helpdesk_manager,1,1,1,1
+access_helpdesk_mobile_field_config_user,access.helpdesk.mobile.field.config.user,model_helpdesk_mobile_field_config,base.group_user,1,0,0,0
+access_helpdesk_mobile_field_config_portal,access.helpdesk.mobile.field.config.portal,model_helpdesk_mobile_field_config,base.group_portal,1,0,0,0

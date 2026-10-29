@@ -1,0 +1,379 @@
+openapi: 3.0.3
+info:
+  title: Odoo Helpdesk Mobile API
+  version: 1.0.0
+  description: >
+    REST API backend for the Odoo Helpdesk Flutter mobile application.
+    Supports customer portal self-service and business owner / admin executive management.
+servers:
+  - url: http://127.0.0.1:8069/api/mobile/v1
+    description: Local Development Server
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    ApiResponse:
+      type: object
+      required: [ok]
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+        error:
+          type: object
+          properties:
+            code: {type: string}
+            message: {type: string}
+            fields: {type: object}
+
+    UserSummary:
+      type: object
+      properties:
+        id: {type: integer}
+        name: {type: string}
+        email: {type: string}
+        role:
+          type: string
+          enum: [customer, admin]
+        partner_id: {type: integer}
+        language: {type: string}
+
+    Stage:
+      type: object
+      properties:
+        id: {type: integer}
+        name: {type: string}
+        sequence: {type: integer}
+        is_closed: {type: boolean}
+        fold: {type: boolean}
+
+    TicketSummary:
+      type: object
+      properties:
+        id: {type: integer}
+        number: {type: string}
+        subject: {type: string}
+        stage: {$ref: '#/components/schemas/Stage'}
+        priority: {type: integer}
+        assignee: {type: object}
+        customer: {type: object}
+        tags:
+          type: array
+          items:
+            type: object
+            properties:
+              id: {type: integer}
+              name: {type: string}
+        created_at: {type: string, format: date-time}
+        updated_at: {type: string, format: date-time}
+        allowed_actions:
+          type: array
+          items: {type: string}
+        custom:
+          type: object
+          description: Dynamic schema-driven custom fields
+
+    TicketDetail:
+      allOf:
+        - $ref: '#/components/schemas/TicketSummary'
+        - type: object
+          properties:
+            description: {type: string}
+            rejection_reason: {type: string}
+            closed_at: {type: string, format: date-time}
+            attachments:
+              type: array
+              items:
+                type: object
+                properties:
+                  id: {type: integer}
+                  name: {type: string}
+                  mimetype: {type: string}
+                  size: {type: integer}
+                  url: {type: string}
+
+paths:
+  /auth/login:
+    post:
+      summary: User login (customer or admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: {type: string}
+                password: {type: string}
+                platform: {type: string}
+                app_version: {type: string}
+      responses:
+        '200':
+          description: Successful authentication
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResponse'}
+
+  /auth/register:
+    post:
+      summary: Customer self-registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, email, password]
+              properties:
+                name: {type: string}
+                email: {type: string}
+                password: {type: string}
+                phone: {type: string}
+      responses:
+        '201': {description: Customer account registered}
+
+  /auth/refresh:
+    post:
+      summary: Refresh access token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refresh_token]
+              properties:
+                refresh_token: {type: string}
+      responses:
+        '200': {description: New token pair issued}
+
+  /auth/logout:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Revoke session tokens
+      responses:
+        '200': {description: Logged out}
+
+  /me:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Get user profile
+      responses:
+        '200': {description: Profile details}
+    patch:
+      security: [{BearerAuth: []}]
+      summary: Update profile name, phone, language
+      responses:
+        '200': {description: Profile updated}
+
+  /me/devices:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Register FCM push device token
+      responses:
+        '200': {description: Device registered}
+
+  /meta/stages:
+    get:
+      security: [{BearerAuth: []}]
+      summary: List all dynamic helpdesk stages
+      responses:
+        '200': {description: Ordered stages}
+
+  /meta/ticket-fields:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Fetch dynamic custom fields schema for user role
+      parameters:
+        - in: header
+          name: If-None-Match
+          schema: {type: string}
+      responses:
+        '200': {description: Dynamic schema payload}
+        '304': {description: Not modified (cached schema valid)}
+
+  /meta/lookup/{field_name}:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Lookup options for relational custom fields
+      parameters:
+        - in: path
+          name: field_name
+          required: true
+          schema: {type: string}
+      responses:
+        '200': {description: Option list}
+
+  /tickets:
+    get:
+      security: [{BearerAuth: []}]
+      summary: List tickets (customer-scoped or admin all)
+      parameters:
+        - in: query
+          name: page
+          schema: {type: integer, default: 1}
+        - in: query
+          name: page_size
+          schema: {type: integer, default: 20}
+        - in: query
+          name: stage_group
+          schema: {type: string, enum: [open, in_progress, done, rejected]}
+        - in: query
+          name: q
+          schema: {type: string}
+      responses:
+        '200': {description: Paginated tickets}
+    post:
+      security: [{BearerAuth: []}]
+      summary: Create new ticket
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          schema: {type: string}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [subject, description]
+              properties:
+                subject: {type: string}
+                description: {type: string}
+                priority: {type: integer}
+                custom: {type: object}
+      responses:
+        '201': {description: Ticket created}
+
+  /tickets/{id}:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Get ticket detail
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: {type: integer}
+      responses:
+        '200': {description: Ticket detail}
+    patch:
+      security: [{BearerAuth: []}]
+      summary: Admin edit ticket metadata
+      responses:
+        '200': {description: Ticket updated}
+
+  /tickets/{id}/messages:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Get chatter messages (internal notes stripped for customers)
+      responses:
+        '200': {description: Messages array}
+    post:
+      security: [{BearerAuth: []}]
+      summary: Post message or internal note
+      responses:
+        '201': {description: Message posted}
+
+  /tickets/{id}/confirm:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Customer confirm resolution (moves to Done)
+      responses:
+        '200': {description: Resolution confirmed}
+
+  /tickets/{id}/reopen:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Customer reopen ticket (moves back to Work In Progress)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason]
+              properties:
+                reason: {type: string}
+      responses:
+        '200': {description: Ticket reopened}
+
+  /tickets/{id}/approve:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Admin approve ticket in stage New
+      responses:
+        '200': {description: Approved}
+
+  /tickets/{id}/reject:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Admin reject ticket in stage New
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reason]
+              properties:
+                reason: {type: string}
+      responses:
+        '200': {description: Rejected}
+
+  /tickets/{id}/assign:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Admin assign ticket
+      responses:
+        '200': {description: Assigned}
+
+  /tickets/{id}/stage:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Admin change ticket stage
+      responses:
+        '200': {description: Stage updated}
+
+  /tickets/bulk:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Admin bulk operations (1 to 50 tickets)
+      responses:
+        '200': {description: Bulk results array}
+
+  /dashboard:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Admin executive dashboard metrics
+      responses:
+        '200': {description: Metrics and breakdown}
+
+  /customers:
+    get:
+      security: [{BearerAuth: []}]
+      summary: Admin customer directory
+      responses:
+        '200': {description: Customers list}
+
+  /attachments:
+    post:
+      security: [{BearerAuth: []}]
+      summary: Multipart file upload
+      responses:
+        '201': {description: File uploaded}
+
+  /notifications:
+    get:
+      security: [{BearerAuth: []}]
+      summary: In-app notifications
+      responses:
+        '200': {description: Notifications list}

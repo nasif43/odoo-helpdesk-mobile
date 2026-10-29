@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#e9f2fb", "secondary-fixed": "#ffd7f1", "on-secondary-container": "#78516d", "surface-dim": "#d2dbe4", "surface-variant": "#dbe4ed", "inverse-surface": "#293138", "background": "#f6faff", "error-container": "#ffdad6", "tertiary": "#00617d", "secondary-fixed-dim": "#e9b8d9", "tertiary-fixed-dim": "#77d2fa", "on-primary": "#ffffff", "tertiary-fixed": "#bee9ff", "surface-container": "#e6eff8", "on-secondary": "#ffffff", "on-background": "#141d23", "primary-container": "#017e84", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-tertiary-fixed": "#001f2a", "on-secondary-fixed-variant": "#5f3b56", "on-error-container": "#93000a", "outline-variant": "#bdc9c9", "on-tertiary-container": "#f0f9ff", "surface": "#f6faff", "surface-tint": "#00696e", "secondary": "#79526f", "on-primary-fixed": "#002022", "on-surface": "#141d23", "surface-bright": "#f6faff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#004d65", "primary": "#006368", "surface-container-high": "#e0e9f2", "primary-fixed-dim": "#78d5db", "outline": "#6e797a", "secondary-container": "#fac9ea", "on-surface-variant": "#3e4949", "on-primary-container": "#dffdff", "surface-container-low": "#ecf5fe", "inverse-primary": "#78d5db", "primary-fixed": "#95f1f8", "surface-container-highest": "#dbe4ed", "on-primary-fixed-variant": "#004f53", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#2f1029", "tertiary-container": "#007b9f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "gutter-tablet": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-tablet": "1.5rem" }, fontFamily: { "headline-xl": ["Roboto"], "headline-lg": ["Roboto"], "headline-md": ["Roboto"], "body-sm": ["Roboto"], "label-md": ["Roboto"], "label-lg": ["Roboto"], "label-sm": ["Roboto"], "body-md": ["Roboto"], "body-lg": ["Roboto"], "headline-xl-mobile": ["Roboto"] }, fontSize: { "headline-xl": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0", "fontWeight": "700" }], "headline-lg": ["1.3125rem", { "lineHeight": "1.75rem", "letterSpacing": "0", "fontWeight": "700" }], "headline-md": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "700" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "700" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.3125rem", "letterSpacing": "0", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase">Action Sheet Overlay</h1></div><div class="flex items-center gap-space-xs"><button aria-label="More actions" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full relative min-w-0">
+<!-- Backdrop Background (Simulated Ambient Desktop/Dispatch Underlay) -->
+<div aria-hidden="true" class="w-full px-margin py-space-md opacity-40 select-none pointer-events-none">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">TICKET #115 • STAGE: TRIAGE</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full">High Priority</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface mb-space-xs">Payment gateway webhook signature mismatch</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reported by Elena Rostova • Starlight Media</p>
+</div>
+<div class="h-28 bg-surface-container rounded-xl"></div>
+</div>
+<!-- Dimmed Modal Scrim Overlay -->
+<div class="fixed inset-0 z-40 bg-on-surface/50 backdrop-blur-sm transition-opacity"></div>
+<!-- Reject Action Bottom Sheet -->
+<div class="fixed inset-x-0 bottom-0 z-50 flex flex-col max-h-[813px] bg-surface-container-lowest rounded-t-xl shadow-xl overflow-hidden animate-[slideUp_0.25s_ease-out]">
+<!-- Grab Bar & Handle Bar -->
+<div class="w-full flex items-center justify-center pt-space-sm pb-space-xs cursor-grab active:cursor-grabbing">
+<div class="w-10 h-1.5 bg-outline-variant rounded-full"></div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto px-margin pt-space-xs pb-space-md flex flex-col gap-space-md">
+<!-- Alert Header -->
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">gpp_bad</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-space-xs py-0.5 rounded-full uppercase">Action Required</span>
+<span class="font-label-sm text-label-sm text-outline">Stage Triage</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Reject Ticket #115</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Payment gateway webhook signature mismatch</p>
+</div>
+</div>
+<!-- Impact Warning Notice Box -->
+<div class="bg-error-container/40 rounded-lg p-space-sm flex items-start gap-space-sm text-on-error-container">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="font-body-sm text-body-sm leading-tight">
+          Rejection will notify <strong class="font-bold text-on-surface">Elena Rostova (Starlight Media)</strong> and close this ticket without dispatching to engineering queue.
+        </p>
+</div>
+<!-- Form Elements -->
+<form class="flex flex-col gap-space-md" id="rejection-form" onsubmit="event.preventDefault();">
+<!-- Rejection Reason Radio Group -->
+<fieldset class="flex flex-col gap-space-xs">
+<legend class="font-label-lg text-label-lg text-on-surface mb-space-xs flex items-center justify-between">
+<span>Primary Reason for Rejection</span>
+<span class="font-label-sm text-label-sm text-error font-normal">* Mandatory</span>
+</legend>
+<!-- Radio 1 -->
+<label class="group flex items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="peer sr-only" name="rejection_reason" type="radio" value="duplicate"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center peer-checked:bg-primary transition-colors shrink-0 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-on-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<div class="ml-space-sm flex flex-col">
+<span class="font-body-md text-body-md text-on-surface peer-checked:font-bold">Duplicate Ticket</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ticket matches existing active issue or thread</span>
+</div>
+</label>
+<!-- Radio 2 -->
+<label class="group flex items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="peer sr-only" name="rejection_reason" type="radio" value="sla_unsupported"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center peer-checked:bg-primary transition-colors shrink-0 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-on-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<div class="ml-space-sm flex flex-col">
+<span class="font-body-md text-body-md text-on-surface peer-checked:font-bold">Out of SLA / Unsupported Scope</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Request falls outside tier SLA service terms</span>
+</div>
+</label>
+<!-- Radio 3 -->
+<label class="group flex items-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="peer sr-only" name="rejection_reason" type="radio" value="insufficient_info"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center peer-checked:bg-primary transition-colors shrink-0 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-on-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<div class="ml-space-sm flex flex-col">
+<span class="font-body-md text-body-md text-on-surface peer-checked:font-bold">Insufficient Diagnostic Information Provided</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Missing reproduction traces, headers, or server logs</span>
+</div>
+</label>
+<!-- Radio 4 (Checked by default for context fit) -->
+<label class="group flex items-center p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<input checked="" class="peer sr-only" name="rejection_reason" type="radio" value="misconfiguration"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center peer-checked:bg-primary transition-colors shrink-0 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-on-primary opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+<div class="ml-space-sm flex flex-col">
+<span class="font-body-md text-body-md text-on-surface peer-checked:font-bold">Customer Misconfiguration</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Environment setup discrepancy or secret key error</span>
+</div>
+</label>
+</fieldset>
+<!-- Customer Communication Textarea Field -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant" for="reject-explanation">
+              Provide explanation to customer <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Will be sent via email</span>
+</div>
+<div class="relative bg-surface-container-low rounded-lg p-space-sm focus-within:bg-surface-container transition-colors">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md outline-none resize-none placeholder:text-outline" id="reject-explanation" placeholder="Detail reasons and recommended remedy steps for the customer..." rows="4">The webhook failure is due to mismatched HMAC keys in staging environment. Please verify secret token in API dashboard.</textarea>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm">Standard Solution Template</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">118 characters</span>
+</div>
+</div>
+</div>
+<!-- Notification Toggle Checkbox -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container flex items-center justify-center peer-checked:bg-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-primary opacity-0 peer-checked:opacity-100">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Send automated rejection notification email and close chat thread</span>
+</label>
+</form>
+</div>
+<!-- Action Sheet Fixed Footer -->
+<div class="p-margin bg-surface-container-low flex flex-col gap-space-sm shrink-0">
+<div class="flex items-center gap-space-sm">
+<!-- Secondary Keep Open Button -->
+<button class="flex-1 h-12 bg-surface-container-highest text-on-surface font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs active:bg-outline-variant transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Keep Open</span>
+</button>
+<!-- Destructive Primary Rejection Confirmation Button -->
+<button class="flex-[1.5] h-12 bg-error text-on-error font-label-lg text-label-lg rounded-lg shadow-md flex items-center justify-center gap-space-xs active:opacity-90 transition-all" id="confirm-reject-btn" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">cancel</span>
+<span>[✕] Confirm Rejection</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-center text-outline">
+        Action recorded in Odoo audit log under Elena Rostova
+      </p>
+</div>
+</div>
+<script>
+    (function() {
+      const confirmBtn = document.getElementById('confirm-reject-btn');
+      const reasonInputs = document.querySelectorAll('input[name="rejection_reason"]');
+      const textarea = document.getElementById('reject-explanation');
+
+      // Feedback on option change
+      reasonInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+          if (e.target.value === 'duplicate') {
+            textarea.value = 'Ticket #115 has been flagged as a duplicate of Ticket #098. Please continue conversation in the master thread.';
+          } else if (e.target.value === 'sla_unsupported') {
+            textarea.value = 'This service request scope exceeds standard SLA support tiers. Contact your dedicated account manager for custom dispatch.';
+          } else if (e.target.value === 'insufficient_info') {
+            textarea.value = 'We require specific diagnostic payload headers and server timestamps to inspect this webhook failure. Please submit a new ticket with debug dumps attached.';
+          } else if (e.target.value === 'misconfiguration') {
+            textarea.value = 'The webhook failure is due to mismatched HMAC keys in staging environment. Please verify secret token in API dashboard.';
+          }
+        });
+      });
+
+      // Simple confirmation visual micro-feedback
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+          confirmBtn.disabled = true;
+          confirmBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+            <span>Rejecting #115...</span>
+          `;
+          setTimeout(() => {
+            confirmBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[20px]">done</span>
+              <span>Ticket Rejected</span>
+            `;
+            setTimeout(() => {
+              history.back();
+            }, 600);
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>

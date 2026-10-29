@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#e9f2fb", "secondary-fixed": "#ffd7f1", "on-secondary-container": "#78516d", "surface-dim": "#d2dbe4", "surface-variant": "#dbe4ed", "inverse-surface": "#293138", "background": "#f6faff", "error-container": "#ffdad6", "tertiary": "#00617d", "secondary-fixed-dim": "#e9b8d9", "tertiary-fixed-dim": "#77d2fa", "on-primary": "#ffffff", "tertiary-fixed": "#bee9ff", "surface-container": "#e6eff8", "on-secondary": "#ffffff", "on-background": "#141d23", "primary-container": "#017e84", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-tertiary-fixed": "#001f2a", "on-secondary-fixed-variant": "#5f3b56", "on-error-container": "#93000a", "outline-variant": "#bdc9c9", "on-tertiary-container": "#f0f9ff", "surface": "#f6faff", "surface-tint": "#00696e", "secondary": "#79526f", "on-primary-fixed": "#002022", "on-surface": "#141d23", "surface-bright": "#f6faff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#004d65", "primary": "#006368", "surface-container-high": "#e0e9f2", "primary-fixed-dim": "#78d5db", "outline": "#6e797a", "secondary-container": "#fac9ea", "on-surface-variant": "#3e4949", "on-primary-container": "#dffdff", "surface-container-low": "#ecf5fe", "inverse-primary": "#78d5db", "primary-fixed": "#95f1f8", "surface-container-highest": "#dbe4ed", "on-primary-fixed-variant": "#004f53", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#2f1029", "tertiary-container": "#007b9f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "gutter-tablet": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-tablet": "1.5rem" }, fontFamily: { "headline-xl": ["Roboto"], "headline-lg": ["Roboto"], "headline-md": ["Roboto"], "body-sm": ["Roboto"], "label-md": ["Roboto"], "label-lg": ["Roboto"], "label-sm": ["Roboto"], "body-md": ["Roboto"], "body-lg": ["Roboto"], "headline-xl-mobile": ["Roboto"] }, fontSize: { "headline-xl": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0", "fontWeight": "700" }], "headline-lg": ["1.3125rem", { "lineHeight": "1.75rem", "letterSpacing": "0", "fontWeight": "700" }], "headline-md": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "700" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "700" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.3125rem", "letterSpacing": "0", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase">Action Sheet Overlay</h1></div><div class="flex items-center gap-space-xs"><button aria-label="More actions" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full relative">
+<!-- Backdrop / Ambient Page Context Behind Action Sheet -->
+<div class="px-margin pt-space-md space-y-space-md opacity-40 pointer-events-none select-none">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-space-xs px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          TICKET #104
+        </span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+          Resolved
+        </span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface">Payment Gateway Webhook Timeout on Checkout</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Closed on Oct 24, 2023 by Sarah Jenkins</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="h-4 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container rounded w-full"></div>
+<div class="h-3 bg-surface-container rounded w-5/6"></div>
+</div>
+</div>
+<!-- Bottom Sheet Overlay Container -->
+<div class="fixed inset-0 z-40 bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300" id="modal-scrim"></div>
+<!-- Bottom Sheet Core -->
+<section aria-labelledby="sheet-title" aria-modal="true" class="fixed inset-x-0 bottom-0 z-50 flex flex-col max-h-[813px] bg-surface-container-lowest rounded-t-[1.25rem] shadow-2xl overflow-hidden transition-transform duration-300 transform translate-y-0" role="dialog">
+<!-- Grab Bar & Sheet Header -->
+<div class="pt-space-sm pb-space-xs px-margin flex flex-col items-center select-none cursor-grab active:cursor-grabbing">
+<div class="w-12 h-1.5 bg-surface-variant rounded-full mb-space-xs"></div>
+<div class="w-full flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="sheet-title">Reopen Ticket #104</h2>
+</div>
+</div>
+<button aria-label="Dismiss sheet" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-95 transition-all" id="btn-close-sheet" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Form Body -->
+<div class="px-margin py-space-sm overflow-y-auto space-y-space-md overscroll-contain">
+<!-- Warning / Impact Callout Banner -->
+<div class="p-space-md rounded-xl bg-secondary-container/50 flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-lg text-label-lg text-on-secondary-container block">Status Downgrade Notice</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container/90 leading-relaxed">
+            This ticket was marked <strong class="font-bold">Done</strong> yesterday. Reopening will reset status to <span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary font-bold">Work In Progress</span> and alert <strong class="font-bold">Sarah Jenkins</strong> (Support Specialist).
+          </p>
+</div>
+</div>
+<!-- Assignee Quick Pill Card -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Close up professional portrait of Sarah Jenkins, a friendly support specialist wearing a minimal headset and navy blazer in an office setting with warm ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-t-C9TJ7a0Bg6fjsEfpITTwb4nEgiyRITG26LtxeV0_18lV-7_F18-DSojTyC9F3v6rt_b7vd78QqIJPSpjo8-bo9182RXApyW80DMrlzzQ2ft0Lcxw_K3Z7Cl0aJUBUjcTC059gELeX1jk59pCeia0lvo6a-fKKjqqVdzax2ssNlzC55SZAkg0YdRFcLuJy022ItcZ5dhWsnNyJeKNdjiCllnJVeHJoIJYqpGY"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Sarah Jenkins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Tier 2 Tech Support • Response avg 14m</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container px-2 py-1 rounded bg-surface-container-highest">
+          Assigned
+        </span>
+</div>
+<!-- Reason Textarea -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-baseline">
+<label class="font-label-lg text-label-lg text-on-surface" for="reopen-reason">
+            Reason for reopening <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="char-counter">0 / 400</span>
+</div>
+<div class="relative rounded-xl bg-surface-container-low focus-within:bg-surface-container transition-colors">
+<textarea class="w-full bg-transparent p-space-md font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none resize-none" id="reopen-reason" maxlength="400" placeholder="Describe what issue re-occurred or why further assistance is required..." rows="4"></textarea>
+</div>
+<p class="font-label-sm text-label-sm text-error hidden flex items-center gap-1" id="validation-hint">
+<span class="material-symbols-outlined text-[14px]">error</span> Please provide an explanation before proceeding.
+        </p>
+</div>
+<!-- Attachment Checkbox & Drawer Trigger -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input class="sr-only peer" id="chk-attach-file" type="checkbox"/>
+<div class="w-[18px] h-[18px] rounded-[3px] bg-surface-container-high peer-checked:bg-primary-container flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-[14px] text-on-primary hidden peer-checked:block font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Attach new log or screenshot</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Helps technical team resolve regressions faster</span>
+</div>
+</label>
+<!-- Dynamic Upload Area (Toggled by Checkbox) -->
+<div class="hidden pt-space-xs space-y-space-xs" id="file-drop-section">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary-container mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">Tap to browse files</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">PNG, JPG, MP4 or LOG (max 25MB)</p>
+</div>
+<div class="flex items-center gap-space-xs p-2 rounded bg-surface-container-lowest shadow-sm">
+<img class="w-8 h-8 rounded object-cover" data-alt="A macro snapshot of a digital error log dashboard screen with red highlighted timestamped system stack trace anomalies and server disconnect codes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC43iVEsNQnshrWcG1e8wqcOZM5S4jXtZKWGYBdqSs3Ys-4ZzCRqzL-2lrOOrPfaySJ1Zlr9V_63m7RS3rDxJMfl-nS72_7JNGmhJnUpYYRf9GAP1bwFXh4yCJTywWwyPcWbVrcUWnTC-6NXdo4F9I8_58-xn26HH-AlsKe6IzvBVRR3-0cpxRA-ot0DiptBnKE-DUv76sl2DCXxxsq2xW0cGQCj4ZmoKo_sFwv_ew"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface truncate">gateway_error_dump_1024.log</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">142 KB</p>
+</div>
+<button aria-label="Remove pre-attached asset" class="text-on-surface-variant hover:text-error p-1" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar / Sticky Sheet Footer -->
+<div class="px-margin pt-space-sm pb-space-lg bg-surface-container-lowest flex items-center gap-space-sm shadow-[0_-4px_16px_rgba(0,0,0,0.03)]">
+<button class="flex-1 h-12 rounded-lg bg-surface-container-high hover:bg-surface-variant active:scale-[0.98] text-on-surface font-label-lg text-label-lg flex items-center justify-center transition-all" id="btn-keep-resolved" type="button">
+        Keep Resolved
+      </button>
+<button class="flex-[1.4] h-12 rounded-lg bg-primary-container hover:bg-primary active:scale-[0.98] text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md transition-all" id="btn-confirm-reopen" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Confirm Reopen</span>
+</button>
+</div>
+</section>
+<!-- Interactive Logic -->
+<script>
+    (() => {
+      const reasonInput = document.getElementById('reopen-reason');
+      const charCounter = document.getElementById('char-counter');
+      const chkAttach = document.getElementById('chk-attach-file');
+      const fileSection = document.getElementById('file-drop-section');
+      const validationHint = document.getElementById('validation-hint');
+      const confirmBtn = document.getElementById('btn-confirm-reopen');
+      const closeBtn = document.getElementById('btn-close-sheet');
+      const keepBtn = document.getElementById('btn-keep-resolved');
+      const scrim = document.getElementById('modal-scrim');
+
+      if (reasonInput && charCounter) {
+        reasonInput.addEventListener('input', (e) => {
+          const val = e.target.value;
+          charCounter.textContent = `${val.length} / 400`;
+          if (val.trim().length > 0) {
+            validationHint.classList.add('hidden');
+          }
+        });
+      }
+
+      if (chkAttach && fileSection) {
+        chkAttach.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            fileSection.classList.remove('hidden');
+          } else {
+            fileSection.classList.add('hidden');
+          }
+        });
+      }
+
+      const dismissSheet = () => {
+        const dialog = document.querySelector('section[role="dialog"]');
+        if (dialog && scrim) {
+          dialog.classList.add('translate-y-full');
+          scrim.classList.add('opacity-0');
+          setTimeout(() => {
+            history.back();
+          }, 240);
+        }
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', dismissSheet);
+      if (keepBtn) keepBtn.addEventListener('click', dismissSheet);
+      if (scrim) scrim.addEventListener('click', dismissSheet);
+
+      if (confirmBtn && reasonInput) {
+        confirmBtn.addEventListener('click', () => {
+          const text = reasonInput.value.trim();
+          if (!text) {
+            validationHint.classList.remove('hidden');
+            reasonInput.focus();
+            return;
+          }
+
+          confirmBtn.disabled = true;
+          confirmBtn.innerHTML = `
+            <span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+            <span>Reopening...</span>
+          `;
+
+          setTimeout(() => {
+            dismissSheet();
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>
