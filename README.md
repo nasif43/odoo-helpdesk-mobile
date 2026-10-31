@@ -76,10 +76,11 @@ odoo-helpdesk-mobile/
    flutter pub get
    ```
 2. **Configure API Base URL**:
-   In `lib/core/network/api_client.dart`, set your backend URL or Cloudflare Tunnel endpoint:
+   The application defaults to the permanent 24/7 backend deployed on `tender-server`:
    ```dart
-   static const String publicTunnelUrl = 'https://your-domain.trycloudflare.com';
+   static const String permanentServerUrl = 'https://tender.metamorphosis.com.bd';
    ```
+   You can override this in `lib/core/network/api_client.dart` if testing against a custom local or staging host.
 3. **Run Unit & Widget Tests**:
    ```bash
    flutter test
@@ -96,6 +97,15 @@ odoo-helpdesk-mobile/
    # Or build optimized APK
    flutter build apk --debug --split-per-abi
    ```
+
+### 3. Direct Download & Releases
+
+Pre-compiled Android APK binaries (including `helpdeskapp_311026_v1.apk`) are available under GitHub Releases:
+- Download the latest APK from the [Releases](https://github.com/nasif43/odoo-helpdesk-mobile/releases) tab.
+- Install directly to your connected Android phone:
+  ```bash
+  adb install -r releaseApk/helpdeskapp_311026_v1.apk
+  ```
 
 ---
 
