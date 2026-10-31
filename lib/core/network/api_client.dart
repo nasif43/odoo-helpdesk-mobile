@@ -3,11 +3,11 @@ import '../storage/token_storage.dart';
 import '../errors/failures.dart';
 
 class ApiClient {
-  static const String publicTunnelUrl = 'https://fighters-impressed-customize-caution.trycloudflare.com';
+  static const String permanentServerUrl = 'https://tender.metamorphosis.com.bd';
 
   static String get defaultBaseUrl {
-    // Default to active Cloudflare public HTTPS tunnel so physical mobile devices over Wi-Fi/LTE connect seamlessly
-    return '$publicTunnelUrl/api/mobile/v1';
+    // 24/7 dedicated production/demo endpoint on tender-server
+    return '$permanentServerUrl/api/mobile/v1';
   }
 
   final Dio dio;
@@ -18,7 +18,10 @@ class ApiClient {
           baseUrl: baseUrl ?? defaultBaseUrl,
           connectTimeout: const Duration(seconds: 15),
           receiveTimeout: const Duration(seconds: 15),
-          headers: {'Content-Type': 'application/json'},
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Odoo-Database': 'odoo_helpdesk_db',
+          },
         )),
         tokenStorage = storage ?? TokenStorage() {
     dio.interceptors.add(
